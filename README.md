@@ -29,6 +29,14 @@ The UI should be very simple and the is no assumption of how good it should look
 1. User should be able to sort asteroids by size or proximity to earth.
 1. User should be able to favourite asteroids and export them in a json inside a `textarea` element
 
+UI should look as close as the picture below:
+![example](example.png)
+
 ## Workshop stack
 1. Typescript
 1. Vanila DOM code without any framework (like Andular, React).
+
+## Usefull commands
+Below are some useful commands you can probably use in this workshop
+1. `document.querySelector()`
+1. `element.append()`

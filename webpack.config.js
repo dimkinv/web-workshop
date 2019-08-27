@@ -12,7 +12,11 @@ module.exports = {
                 test: /\.tsx?$/,
                 use: 'ts-loader',
                 exclude: /node_modules/
-            }
+            },
+            {
+                test: /\.css$/i,
+                use: ['style-loader', 'css-loader'],
+            },
         ]
     },
     resolve: {
@@ -20,7 +24,9 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'foo.bundle.js'
+        filename: 'foo.bundle.js',
+        libraryTarget: 'var',
+        library: 'EntryPoint',
     },
     plugins: [
         new HtmlWebpackPlugin({

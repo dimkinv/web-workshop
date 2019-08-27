@@ -8,7 +8,30 @@
     <title>Document</title>
 </head>
 
-<body>
+<body class="container">
+    <h1 class="title">Asteroids in proximity to earth</h1>
+    <div class="search">
+        <section class="search-field">
+            <label for="startDate">start Date</label>
+            <input type="date" name="startDate" id="startDate">
+        </section>
+
+
+        <section class="search-field">
+            <label for="endDate">end Date</label>
+            <input type="date" name="endDate" id="endDate">
+        </section>
+        <button class="search-btn" type="button" onclick="EntryPoint.onSearchButtonClick()">Search for Asteroids!</button>
+    </div>
+
+    <table class="table">
+        <tr>
+            <th>Ateroid Number</th>
+            <th>Name</th>
+            <th>Diameter</th>
+            <th>Is Hazardous</th>
+        </tr>
+    </table>
 </body>
 
 </html>

@@ -1,15 +1,6 @@
-import {fetchAsteroidsForDates} from './services/fetch.service';
-import { buildTableWithData } from './services/table-builder.service';
+export async function onSearchButtonClick(){    
+    // this function can be used inside HTML as it is part of the EntryPoint library
+    // and it is exported from app.ts
 
-export async function onSearchButtonClick(){
-    const startDateEl = document.querySelector('#startDate') as HTMLInputElement;
-    const endDateEl = document.querySelector('#endDate') as HTMLInputElement;
-
-    if(!startDateEl || !endDateEl){
-        return;
-    }
-
-    const asteroids = await fetchAsteroidsForDates(startDateEl.value, endDateEl.value);
-    buildTableWithData(asteroids);
-    console.log(asteroids);
+    // EXAMPLE: <button type="button" onclick="EntryPoint.onSearchButtonClick()">Search</button>
 }
